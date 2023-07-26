@@ -1,0 +1,12 @@
+# dbt_project.yml
+name: my_dbt_project
+version: '1.5'
+
+profile: my_profile
+
+models:
+  public:
+    materialized: table
+    sql: 'SELECT * FROM zecdata'
+    schema: 'dbt_ksahu'
+    # Add more model-specific configurations here if needed
