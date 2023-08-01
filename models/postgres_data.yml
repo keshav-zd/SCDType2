@@ -2,8 +2,8 @@ version: 2
 sources:
   - name: postgres_data
     description: this is the raw dataset
-    database: postgreSQL
-    schema: postgres
+    database: postgres
+    schema: public
     tables:
       - name: customer
         description: this table contains customer information
@@ -11,5 +11,4 @@ sources:
           - name: id
             description: customer id
             tests:
-              - not null
-      - name: orders    
+              - not null  

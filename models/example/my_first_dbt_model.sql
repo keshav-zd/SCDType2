@@ -7,14 +7,14 @@
     Try changing "table" to "view" below
 */
 
-{{ config(materialized='table') }}
+{{ config(materialized='view') }}
 
 with source_data as (
 
     -- select 1 as id
     -- union all
     -- select null as id
-    select * from customer
+    select id ,name from customer
 )
 
 select *

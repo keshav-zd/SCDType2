@@ -36,3 +36,17 @@ models:
     # Applies to all files under models/example/
     example:
       materialized: view
+    # seeds:
+    #   +schema: country_code
+        # +schema: seed_data
+        # This configures seeds/country_codes.csv
+        # country_code:
+        #   # Override column types
+        #   +column_types:
+        # country_code: varchar(32)
+        # country_name: varchar(32)
+seeds:
+    country_codes:
+      +column_types:
+        country_code: varchar(2)
+        country_name: varchar(32)
